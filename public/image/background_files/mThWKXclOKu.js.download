@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["yECjV"]); }
+
+__d("adsObjectiveSelector",["AdsCampaignGroupCombinedStore","adsCreateStoreSelector"],(function(a,b,c,d,e,f){"use strict";a=b("adsCreateStoreSelector")([b("AdsCampaignGroupCombinedStore")],function(a){a=a.adgroup;a=a.campaign_id;a=b("AdsCampaignGroupCombinedStore").getCached(a).getValueEnforcing();return a.objective},e.id+".adsObjectiveSelector");e.exports=a}),null);

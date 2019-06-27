@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["IOfXI"]); }
+
+__d("AccountQualitySource",[],(function(a,b,c,d,e,f){e.exports=Object.freeze({AD_EMAIL:"ad_email",AD_NOTIF:"ad_notif",APPEAL_EMAIL:"appeal_email",APPEAL_NOTIF:"appeal_notif",DELIVERY_COLUMN:"delivery_column",LINK:"link",MEGA_MENU:"mega_menu",VIEW_REQUEST:"view_request"})}),null);

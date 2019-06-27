@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["zT9rZ"]); }
+
+__d("AdsGuidanceBadge.react",["cx","React","joinClasses"],(function(a,b,c,d,e,f,g){"use strict";function a(a){var c=a.className;a=a.label;return b("React").createElement("div",{className:b("joinClasses")(c,"_84-r")},a)}e.exports=a}),null);

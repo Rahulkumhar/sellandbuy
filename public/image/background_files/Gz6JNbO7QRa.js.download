@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["8Xw5q"]); }
+
+__d("AdsUEditorAdgroupTransformStaticToDynamicSingleMediaActionFlux",[],(function(a,b,c,d,e,f){"use strict";e.exports={actionType:"ADS_UEDITOR_ADGROUP_TRANSFORM_STATIC_TO_DYNAMIC_SINGLE_MEDIA"}}),null);

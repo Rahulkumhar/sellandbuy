@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["IsG0L"]); }
+
+__d("AdsDraftDraftFragmentBatchDeletedDataSelectionCampaignGroupReducerPlugin",["AdObjectLevels","adsDraftIsApplicationIDPowerEditor","adsPEGetDeleteSelectionIDs"],(function(a,b,c,d,e,f){"use strict";__p&&__p();a={reduce:function(a,c){if(!b("adsDraftIsApplicationIDPowerEditor")(c.adsApplicationID))return a;c=b("adsPEGetDeleteSelectionIDs")(c.fragments,a.selection,b("AdObjectLevels").CAMPAIGN_GROUP);if(c.length>0){c=a.selection.subtract(c);return{selection:c,cachedSelectedIDs:Array.from(c)}}return a}};e.exports=a}),null);

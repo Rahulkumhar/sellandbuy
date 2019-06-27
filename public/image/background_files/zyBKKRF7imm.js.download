@@ -1,0 +1,3 @@
+if (self.CavalryLogger) { CavalryLogger.start_js(["vpmdg"]); }
+
+__d("AdsUEditorAdgroupAddCustomizationHeadlineActionFlux",[],(function(a,b,c,d,e,f){"use strict";e.exports={actionType:"AdsUEditorAdgroupAddCustomizationHeadlineActionPlugin"}}),null);
