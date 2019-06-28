@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
 import { Row, Col, Button, NavLink } from 'reactstrap';
-import { Redirect } from 'react-router-dom';
-//import CarouselComp from './casourel';
 import Header from '../header';
 import Footer from '../Footer';
-import Razorpay from 'razorpay';
-//import Cart from '../cart';
-const instance = new Razorpay({
-    key_id: 'rzp_test_NLTPbSULjHYddF',
-    key_secret: 'OmBsRiftiH1ZoW6DEePpG8KI',
-});
+import * as firebase from "firebase";
+
 class ProductDetail extends Component {
     constructor(props) {
         super(props);
@@ -24,15 +18,32 @@ class ProductDetail extends Component {
         
     }
 
-    createPayment() {
+    openCheckout() {
         const {selectedProduct} = this.state;
-        instance.orders.create({
-            amount : selectedProduct.amount || 80,
-            currency: 'INR',
-            receipt: new Date().getTime(),
-            payment_capture: 1
-        });
-    }
+        const currentUser = firebase.auth().currentUser
+        const options = {
+          "key": "rzp_test_NLTPbSULjHYddF",
+          "amount": (selectedProduct.amount || 10) * 100 , // 2000 paise = INR 20, amount in paisa
+          "name": "Sell and Buy",
+          "description": "Purchase Description",
+          "image": "/your_logo.png",
+          "handler": function (response){
+            alert(response.razorpay_payment_id);
+          },
+          "prefill": {
+            "name": currentUser.displayName,
+            "email":currentUser.email
+          },
+          "notes": {
+            "address":currentUser.displayName
+          },
+          "theme": {
+            "color": "#F37254"
+          }
+        };
+        const instance = new window.Razorpay(options);
+        instance.open();
+      }
 
 
     render() {
@@ -84,7 +95,7 @@ class ProductDetail extends Component {
                                         <h4>Arun</h4>
                                     </div>
                                     <div>
-                                        <NavLink onClick={this.createPayment()}> <Button color="primary" size="sm">Buy</Button>
+                                        <NavLink onClick={this.openCheckout()}> <Button color="primary" size="sm">Buy</Button>
                                         </NavLink>
                                     </div>
                                 </div>
